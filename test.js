@@ -39,7 +39,7 @@ renderTest();
 function isInconsistent(formula) {
     let atoms = [...new Set(formula.split(/[^A-Z]/).filter(atom => atom !== ''))];
     if (atoms.length === 0) {
-        return false;
+        return getResult(formula) == 0;
     }
 
     // формула - просто константа 0
